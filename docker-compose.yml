@@ -1,0 +1,52 @@
+version: '3'
+
+services:
+  watchtower:
+    image: containrrr/watchtower
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/timezone:/etc/timezone:ro
+    environment:
+      - WATCHTOWER_CLEANUP=true
+      - WATCHTOWER_LABEL_ENABLE=true
+      - WATCHTOWER_INCLUDE_RESTARTING=true
+      - WATCHTOWER_POLL_INTERVAL=60
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+  api:
+    image: jpelhaw/nlp-land-backend
+    depends_on:
+      - mongo
+    command: npm run cluster
+    expose: 
+      - 3000
+    ports:
+      - 3000:3000
+    restart: on-failure
+    environment:
+      MONGO_HOST: mongo
+      MONGO_USER: ${MONGO_USER}
+      MONGO_PASSWORD: ${MONGO_PASSWORD}
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+  mongo:
+    image: mongo:4.4.6
+    restart: always
+    env_file: .env
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_DB}
+    expose:
+      - 27017
+    command: mongod
+  frontend:
+    image: jpelhaw/nlp-land-frontend
+    restart: always
+    env_file: .env
+    command: nginx -g "daemon off;"
+    ports:
+      - 80:80
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
