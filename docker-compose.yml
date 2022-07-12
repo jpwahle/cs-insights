@@ -11,11 +11,10 @@ services:
       - WATCHTOWER_CLEANUP=true
       - WATCHTOWER_LABEL_ENABLE=true
       - WATCHTOWER_INCLUDE_RESTARTING=true
-      - WATCHTOWER_POLL_INTERVAL=60
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
   api:
-    image: jpelhaw/nlp-land-backend
+    image: jpelhaw/nlp-land-backend:latest
     depends_on:
       - mongo
     command: npm run cluster
@@ -31,7 +30,7 @@ services:
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
   mongo:
-    image: mongo:4.4.6
+    image: mongo:5.0.9
     restart: always
     env_file: .env
     environment:
@@ -41,8 +40,10 @@ services:
     expose:
       - 27017
     command: mongod
+    volumes:
+      - ~/mongo/data:/data/db
   frontend:
-    image: jpelhaw/nlp-land-frontend
+    image: jpelhaw/nlp-land-frontend:latest
     restart: always
     env_file: .env
     command: nginx -g "daemon off;"
