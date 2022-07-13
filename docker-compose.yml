@@ -14,7 +14,7 @@ services:
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
   api:
-    image: jpelhaw/nlp-land-backend:latest
+    image: ghcr.io/gipplab/cs-insights-backend:latest
     depends_on:
       - mongo
     command: npm run cluster
@@ -43,7 +43,7 @@ services:
     volumes:
       - ~/mongo/data:/data/db
   frontend:
-    image: jpelhaw/nlp-land-frontend:latest
+    image: ghcr.io/gipplab/cs-insights-frontend:latest
     restart: always
     env_file: .env
     command: nginx -g "daemon off;"
