@@ -7,50 +7,51 @@
 *** Thanks again! Now go create something AMAZING! :D
 -->
 
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
-
-<div align="center">
-<a href="https://github.com/gipplab/cs-insights-backend/issues"><img src="https://img.shields.io/github/issues/gipplab/cs-insights-backend.svg?style=for-the-badge"/></a>
-<a href="https://github.com/gipplab/cs-insights-backend/graphs/contributors"><img src="https://img.shields.io/github/contributors/gipplab/cs-insights-backend.svg?style=for-the-badge"/></a>
-<a href="https://github.com/gipplab/cs-insights-backend/stargazers"><img src="https://img.shields.io/github/stars/gipplab/cs-insights-backend.svg?style=for-the-badge"/></a>
-<a href="https://github.com/gipplab/cs-insights-main/blob/master/LICENSE"><img src="https://img.shields.io/github/license/gipplab/cs-insights-main.svg?style=for-the-badge"/></a>
-</div>
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/gipplab/cs-insights-main">
-    <img src="images/logo.jpg" alt="Logo" width="250">
-  </a>
-  <br />
-  <p align="center">
-    The main controller for services in the cs-insights project through docker-compose
-    <br />
-    <br />
+
+<div align="center">
+  <a href="https://github.com/gipplab/cs-insights-backend/issues"><img src="https://img.shields.io/github/issues/gipplab/cs-insights-backend.svg?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-backend/graphs/contributors"><img src="https://img.shields.io/github/contributors/gipplab/cs-insights-backend.svg?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-backend/stargazers"><img src="https://img.shields.io/github/stars/gipplab/cs-insights-backend.svg?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-main/blob/master/LICENSE"><img src="https://img.shields.io/github/license/gipplab/cs-insights-main.svg?style=for-the-badge"/></a>
+  </div>
     <a href="https://github.com/gipplab/cs-insights-frontend"><img src="https://img.shields.io/badge/GitHub-Frontend-green?style=for-the-badge"/></a>
     <a href="https://github.com/gipplab/cs-insights-backend"><img src="https://img.shields.io/badge/GitHub-Backend-green?style=for-the-badge"/></a>
     <a href="https://github.com/gipplab/cs-insights-crawler"><img src="https://img.shields.io/badge/GitHub-Crawler-green?style=for-the-badge"/></a>
     <a href="https://github.com/gipplab/cs-insights-prediction-endpoint"><img src="https://img.shields.io/badge/GitHub-Prediction_Endpoint-green?style=for-the-badge"/></a>
+  <div align="center">
+  <p align="center">
     <br/>
-    <br />
-    <a href="https://jan-philip-wahle.gitbook.io/cs-insights/"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://134.76.17.232/">View Demo</a>
-    ·
-    <a href="https://github.com/gipplab/cs-insights-main/issues/new?assignees=&labels=&template=bug_report.md&title=">Report Bug</a>
-    ·
-    <a href="https://github.com/gipplab/cs-insights-main/issues/new?assignees=&labels=&template=feature_request.md&title=">Request Feature</a>
+    The main controller for services in the cs-insights project through docker-compose
+    <br/>
   </p>
+  <a href="https://github.com/gipplab/cs-insights-main">
+    <img src="images/logo.jpg" alt="Logo" width="250">
+  </a>
+  <br/>
+  <br/>
+  <a href="https://jan-philip-wahle.gitbook.io/cs-insights/"><strong>Explore the docs »</strong></a>
+  <br />
+  <br />
+  <a href="https://134.76.17.232/">View Demo</a>
+  ·
+  <a href="https://github.com/gipplab/cs-insights-main/issues/new?assignees=&labels=&template=bug_report.md&title=">Report Bug</a>
+  ·
+  <a href="https://github.com/gipplab/cs-insights-main/issues/new?assignees=&labels=&template=feature_request.md&title=">Request Feature</a>
+  </div>
+
+  <!-- PROJECT SHIELDS -->
+  <!--
+  *** I'm using markdown "reference style" links for readability.
+  *** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
+  *** See the bottom of this document for the declaration of the reference variables
+  *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
+  *** https://www.markdownguide.org/basic-syntax/#reference-style-links
+  -->
+
+  
 </div>
 
 <!-- ABOUT THE PROJECT -->
