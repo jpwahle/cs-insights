@@ -1,0 +1,12 @@
+[submodule "cs-insights-backend"]
+	path = cs-insights-backend
+	url = https://github.com/gipplab/cs-insights-backend
+[submodule "cs-insights-frontend"]
+	path = cs-insights-frontend
+	url = https://github.com/gipplab/cs-insights-frontend
+[submodule "cs-insights-crawler"]
+	path = cs-insights-crawler
+	url = https://github.com/gipplab/cs-insights-crawler
+[submodule "cs-insights-prediction-endpoint"]
+	path = cs-insights-prediction-endpoint
+	url = https://github.com/gipplab/cs-insights-prediction-endpoint
