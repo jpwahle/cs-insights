@@ -84,9 +84,7 @@ The [frontend](https://github.com/gipplab/cs-insights-frontend) enables abstract
 
 <!-- GETTING STARTED -->
 ## Getting Started
-To get a local copy up and running follow these simple example steps. The project relies on a singe docker-compose.yml file that is used to deploy the services.
-
-If you want to start development, it is recommended to run the development environment in each of the repositories. If you want to develop only on one repository, e.g., the frontend, you can comment out that part in the docker-compose.yml and only develop the part, e.g., the frontend, locally.
+To get a local copy up and running follow these simple example steps. The project relies on a singe docker-compose.yml file that is used to develop and deploy all the services.
 
 ### Prerequisites
 
@@ -94,11 +92,24 @@ You need to have `docker` and `docker-compose` installed.
 
 ### Installation
 
-To spinup the whole project run the following command:
+First, export the environment variables for the project.
 
-```sh
+```bash
 set -o allexport
 source .env
+```
+
+To start the development environment, run the following command:
+
+```sh
+docker-compose -f docker-compose.dev.yml up --build
+```
+
+This will start each service (e.g., backend, frontend) in development mode with hot reload. Whenever you change any files of the sub-repositories (e.g., ./cs-insights-frontend/src/App.tsx) the development server will reload and show the new rendered frontend.
+
+To run the production environment in detached mode, run the following command:
+
+```sh
 docker-compose up -d
 ```
 
@@ -108,7 +119,12 @@ docker-compose up -d
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-_For examples, please refer to the [Documentation](https://jan-philip-wahle.gitbook.io/cs-insights/)_
+The services are available on the following ports:
+- frontend: `80`
+- backend: `3000`
+- prediction-endpoint: `4000`
+
+_For more examples, please refer to the [Documentation](https://jan-philip-wahle.gitbook.io/cs-insights/) or the individual API documentation for [backend](https://gipplab.github.io/cs-insights-backend/), [prediction-endpoint](https://gipplab.github.io/cs-insights-prediction-endpoint/), and [crawler](https://gipplab.github.io/cs-insights-crawler/)_.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -117,7 +133,7 @@ _For examples, please refer to the [Documentation](https://jan-philip-wahle.gitb
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [project board](https://github.com/orgs/gipplab/projects/8) for a full list of proposed features (and known issues).
+See the [project board](https://github.com/orgs/gipplab/projects/8) for a full list of features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
