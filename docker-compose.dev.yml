@@ -1,19 +1,6 @@
 version: '3'
 
 services:
-  # watchtower:
-  #   image: containrrr/watchtower
-  #   restart: always
-  #   volumes:
-  #     - /var/run/docker.sock:/var/run/docker.sock
-  #     - /etc/timezone:/etc/timezone:ro
-  #   environment:
-  #     - WATCHTOWER_CLEANUP=true
-  #     - WATCHTOWER_LABEL_ENABLE=true
-  #     - WATCHTOWER_INCLUDE_RESTARTING=true
-  #     - WATCHTOWER_POLL_INTERVAL=60
-  #   labels:
-  #     - "com.centurylinklabs.watchtower.enable=true"
   api:
     build:
       context: ./cs-insights-backend
