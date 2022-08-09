@@ -35,7 +35,7 @@
   <a href="https://jan-philip-wahle.gitbook.io/cs-insights/"><strong>Explore the docs »</strong></a>
   <br />
   <br />
-  <a href="https://134.76.17.232/">View Demo</a>
+  <a href="http://cs-insights.uni-goettingen.de/">View Demo</a>
   ·
   <a href="https://github.com/gipplab/cs-insights-main/issues/new?assignees=&labels=&template=bug_report.md&title=">Report Bug</a>
   ·
