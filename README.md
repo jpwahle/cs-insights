@@ -42,16 +42,12 @@
   <a href="https://github.com/gipplab/cs-insights-main/issues/new?assignees=&labels=&template=feature_request.md&title=">Request Feature</a>
   </div>
 
-  <!-- PROJECT SHIELDS -->
-  <!--
-  *** I'm using markdown "reference style" links for readability.
-  *** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-  *** See the bottom of this document for the declaration of the reference variables
-  *** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-  *** https://www.markdownguide.org/basic-syntax/#reference-style-links
-  -->
+<br/>
+<br/>
+Demo Credentials <br/>
+user: demo@cs-insights.com <br/>
+password: demo
 
-  
 </div>
 
 <!-- ABOUT THE PROJECT -->
