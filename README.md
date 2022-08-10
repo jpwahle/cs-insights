@@ -21,6 +21,8 @@
     <a href="https://github.com/gipplab/cs-insights-backend"><img src="https://img.shields.io/badge/GitHub-Backend-green?style=for-the-badge"/></a>
     <a href="https://github.com/gipplab/cs-insights-crawler"><img src="https://img.shields.io/badge/GitHub-Crawler-green?style=for-the-badge"/></a>
     <a href="https://github.com/gipplab/cs-insights-prediction-endpoint"><img src="https://img.shields.io/badge/GitHub-Prediction_Endpoint-green?style=for-the-badge"/></a>
+    <a href="https://github.com/gipplab/cs-insights-uptime"><img src="https://img.shields.io/badge/GitHub-Uptime-green?style=for-the-badge"/></a>
+
   <div align="center">
   <p align="center">
     <br/>
