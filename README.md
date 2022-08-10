@@ -83,12 +83,18 @@ The [frontend](https://github.com/gipplab/cs-insights-frontend) enables abstract
 To get a local copy up and running follow these simple example steps. The project relies on a singe docker-compose.yml file that is used to develop and deploy all the services.
 
 ### Prerequisites
-
 You need to have `docker` and `docker-compose` installed.
 
 ### Installation
 
-First, export the environment variables for the project.
+First, clone the repository *and its submodules* locally.
+
+```
+git clone --recurse-submodules -j4 git@github.com:gipplab/cs-insights-main.git
+
+```
+
+Then, export the environment variables for the project.
 
 ```bash
 set -o allexport
