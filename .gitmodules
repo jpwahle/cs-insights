@@ -10,3 +10,6 @@
 [submodule "cs-insights-prediction-endpoint"]
 	path = cs-insights-prediction-endpoint
 	url = https://github.com/gipplab/cs-insights-prediction-endpoint
+[submodule "cs-insights-uptime"]
+	path = cs-insights-uptime
+	url = https://github.com/gipplab/cs-insights-uptime
