@@ -39,6 +39,8 @@
   <br />
   <a href="http://cs-insights.uni-goettingen.de/">View Demo</a>
   ·
+  <a href="https://github.com/gipplab/cs-insights-uptime">Uptime Tracker</a>
+  ·
   <a href="https://github.com/gipplab/cs-insights-main/issues/new?assignees=&labels=&template=bug_report.md&title=">Report Bug</a>
   ·
   <a href="https://github.com/gipplab/cs-insights-main/issues/new?assignees=&labels=&template=feature_request.md&title=">Request Feature</a>
