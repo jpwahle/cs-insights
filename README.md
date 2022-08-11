@@ -94,7 +94,7 @@ You need to have `docker` and `docker-compose` installed.
 First, clone the repository *and its submodules* locally.
 
 ```
-git clone --recurse-submodules -j4 git@github.com:gipplab/cs-insights-main.git
+git clone --recurse-submodules -j5 git@github.com:gipplab/cs-insights-main.git
 
 ```
 
@@ -128,7 +128,7 @@ docker-compose up -d
 The services are available on the following ports:
 - frontend: `80`
 - backend: `3000`
-- prediction-endpoint: `4000`
+- prediction-endpoint: `8000`
 
 _For more examples, please refer to the [Documentation](https://jan-philip-wahle.gitbook.io/cs-insights/) or the individual API documentation for [backend](https://gipplab.github.io/cs-insights-backend/), [frontend](https://gipplab.github.io/cs-insights-frontend/), [prediction-endpoint](https://gipplab.github.io/cs-insights-prediction-endpoint/), and [crawler](https://gipplab.github.io/cs-insights-crawler/)_.
 
