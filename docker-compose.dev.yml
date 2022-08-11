@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  api:
+  backend:
     build:
       context: ./cs-insights-backend
       dockerfile: Dockerfile.development
@@ -47,3 +47,19 @@ services:
     volumes:
       - "/cs-insights-frontend/node_modules"
       - "./cs-insights-frontend:/cs-insights-frontend"
+  prediction-endpoint:
+    build:
+      context: ./cs-insights-prediction-endpoint
+      dockerfile: Dockerfile.development
+    restart: always
+    env_file: .env
+    command: bash -c "poetry install && poetry run python -m dev" # Poetry install here because the mounted volumes are necessary for installing the project as a package
+    ports:
+      - 8000:8000
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+    volumes:
+      - "/poetry.lock"
+      - "/pyproject.toml"
+      - "/root/.cache/pypoetry/virtualenvs"
+      - "./cs-insights-prediction-endpoint:/cs-insights-prediction-endpoint"

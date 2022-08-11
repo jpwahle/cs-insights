@@ -51,3 +51,12 @@ services:
       - 80:80
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
+  prediction-endpoint:
+    image: ghcr.io/gipplab/cs-insights-prediction-endpoint:latest
+    restart: always
+    env_file: .env
+    command: poetry run python -m prod
+    ports:
+      - 8000:8000
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
