@@ -13,7 +13,7 @@ services:
       - WATCHTOWER_INCLUDE_RESTARTING=true
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
-  api:
+  backend:
     image: ghcr.io/gipplab/cs-insights-backend:latest
     depends_on:
       - mongo
@@ -55,7 +55,7 @@ services:
     image: ghcr.io/gipplab/cs-insights-prediction-endpoint:latest
     restart: always
     env_file: .env
-    command: poetry run python -m prod
+    command: poetry run python -m prod --workers 2
     ports:
       - 8000:8000
     labels:
