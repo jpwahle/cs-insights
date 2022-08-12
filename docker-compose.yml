@@ -17,6 +17,7 @@ services:
     image: ghcr.io/gipplab/cs-insights-backend:latest
     depends_on:
       - mongo
+    restart: always
     env_file: .env
     command: npm run cluster
     expose:
