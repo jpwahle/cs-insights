@@ -94,7 +94,7 @@ You need to have `docker` and `docker-compose` installed.
 First, clone the repository *and its submodules* locally.
 
 ```
-git clone --recurse-submodules -j5 git@github.com:gipplab/cs-insights-main.git
+git clone --recurse-submodules -j5 https://github.com/gipplab/cs-insights-main.git
 
 ```
 
@@ -108,7 +108,7 @@ source .env
 To start the development environment, run the following command:
 
 ```sh
-docker-compose -f docker-compose.dev.yml up --build
+docker-compose --env-file .env.development -f docker-compose.dev.yml up --build
 ```
 
 This will start each service (e.g., backend, frontend) in development mode with hot reload. Whenever you change any files of the sub-repositories (e.g., ./cs-insights-frontend/src/App.tsx) the development server will reload and show the new rendered frontend.
@@ -116,8 +116,32 @@ This will start each service (e.g., backend, frontend) in development mode with 
 To run the production environment in detached mode, run the following command:
 
 ```sh
-docker-compose up -d
+docker swarm deploy -f docker-compose.yml cs-insights
 ```
+
+<details>
+  <summary>Production Secrets</summary>
+  
+  Some secret variables should only be available encrypted as environment variables in the production environment.
+  Therefore, the docker-compose.yml contains external docker secrets encrypted on the host server. To export the secrets on the server, run the following command:
+  
+  ```sh
+  docker swarm init
+  ```
+  Or you can also join a swarm using
+
+  ```sh
+  docker swarm join --token <token> <manager-ip>:2377
+  ```
+  
+  where manager-ip is cs-insights.uni-goettingen.de.
+
+  Then create the secrets of the docker-compose-yml with the following command:
+  
+  ```sh
+  printf "<secret>" | docker secret create <secret_name> -
+  ```
+</details>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

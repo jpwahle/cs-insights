@@ -1,4 +1,4 @@
-version: '3'
+version: '3.1'
 
 services:
   watchtower:
@@ -14,7 +14,8 @@ services:
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
   backend:
-    image: ghcr.io/gipplab/cs-insights-backend:latest
+    # image: ghcr.io/gipplab/cs-insights-backend:latest
+    build: ./cs-insights-backend
     depends_on:
       - mongo
     command: npm run cluster
@@ -24,26 +25,24 @@ services:
       - 3000:3000
     restart: on-failure
     environment:
-      MONGO_HOST: mongo
-      MONGO_USER: ${MONGO_USER}
-      MONGO_PASSWORD: ${MONGO_PASSWORD}
+      MONGO_HOST: ${MONGO_HOST}
+    secrets:
+      - mongo_user
+      - mongo_password
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
   mongo:
     image: mongo:5.0.9
     restart: always
     env_file: .env
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
-      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
-      MONGO_INITDB_DATABASE: ${MONGO_DB}
     expose:
       - 27017
     command: mongod
     volumes:
       - ~/mongo/data:/data/db
   frontend:
-    image: ghcr.io/gipplab/cs-insights-frontend:latest
+    # image: ghcr.io/gipplab/cs-insights-frontend:latest
+    build: ./cs-insights-frontend
     restart: always
     env_file: .env
     command: nginx -g "daemon off;"
@@ -52,11 +51,27 @@ services:
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
   prediction-endpoint:
-    image: ghcr.io/gipplab/cs-insights-prediction-endpoint:latest
+    # image: ghcr.io/gipplab/cs-insights-prediction-endpoint:latest
+    build: ./cs-insights-prediction-endpoint
     restart: always
     env_file: .env
     command: poetry run python -m prod --workers 2
+    secrets:
+      - mongo_user
+      - mongo_password
+      - jwt_secret
+    expose: 
+      - 8000
     ports:
       - 8000:8000
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
+    volumes:
+      - ~/prediction-endpoint/saved_models:/cs-insights-prediction-endpoint/saved_models
+secrets:
+  mongo_user:
+    external: true
+  mongo_password:
+    external: true
+  jwt_secret:
+    external: true
