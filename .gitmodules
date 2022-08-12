@@ -13,3 +13,13 @@
 [submodule "cs-insights-uptime"]
 	path = cs-insights-uptime
 	url = https://github.com/gipplab/cs-insights-uptime
+[cs-insights-backend "main"]
+	branch = main
+[cs-insights-frontend "main"]
+	branch = main
+[cs-insights-crawler "main"]
+	branch = main
+[cs-insights-prediction-endpoint "main"]
+	branch = main
+[cs-insights-uptime "master"]
+	branch = master
