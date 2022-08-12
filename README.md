@@ -98,13 +98,6 @@ git clone --recurse-submodules -j5 https://github.com/gipplab/cs-insights-main.g
 
 ```
 
-Then, export the environment variables for the project.
-
-```bash
-set -o allexport
-source .env
-```
-
 To start the development environment, run the following command:
 
 ```sh
