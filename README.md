@@ -98,13 +98,6 @@ git clone --recurse-submodules -j5 https://github.com/gipplab/cs-insights-main.g
 
 ```
 
-Then, export the environment variables for the project.
-
-```bash
-set -o allexport
-source .env
-```
-
 To start the development environment, run the following command:
 
 ```sh
@@ -116,7 +109,7 @@ This will start each service (e.g., backend, frontend) in development mode with 
 To run the production environment in detached mode, run the following command:
 
 ```sh
-docker swarm deploy -f docker-compose.yml cs-insights
+docker stack deploy -c docker-compose.yml cs-insights
 ```
 
 <details>
