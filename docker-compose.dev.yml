@@ -5,12 +5,15 @@ services:
     build:
       context: ./cs-insights-backend
       dockerfile: Dockerfile.development
+    restart: always
+    env_file: .env.development
     depends_on:
       - mongo
     command: npm run dev
     ports:
       - 3000:3000
-    restart: on-failure
+    expose:
+      - 3000
     environment:
       MONGO_HOST: mongo
       MONGO_USER: ${MONGO_USER}
@@ -18,12 +21,12 @@ services:
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
     volumes:
-      - "/cs-insights-backend/node_modules"
-      - "./cs-insights-backend:/cs-insights-backend"
+      - /cs-insights-backend/node_modules
+      - ./cs-insights-backend:/cs-insights-backend
   mongo:
     image: mongo:5.0.9
     restart: always
-    env_file: .env
+    env_file: .env.development
     environment:
       MONGO_INITDB_ROOT_USERNAME: ${MONGO_USER}
       MONGO_INITDB_ROOT_PASSWORD: ${MONGO_PASSWORD}
@@ -38,7 +41,7 @@ services:
       context: ./cs-insights-frontend
       dockerfile: Dockerfile.development
     restart: always
-    env_file: .env
+    env_file: .env.development
     command: npm start
     ports:
       - 80:3001
@@ -52,14 +55,14 @@ services:
       context: ./cs-insights-prediction-endpoint
       dockerfile: Dockerfile.development
     restart: always
-    env_file: .env
+    env_file: .env.development
     command: bash -c "poetry install && poetry run python -m dev" # Poetry install here because the mounted volumes are necessary for installing the project as a package
     ports:
       - 8000:8000
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
     volumes:
-      - "/poetry.lock"
-      - "/pyproject.toml"
-      - "/root/.cache/pypoetry/virtualenvs"
-      - "./cs-insights-prediction-endpoint:/cs-insights-prediction-endpoint"
+      - /poetry.lock
+      - /pyproject.toml
+      - /root/.cache/pypoetry/virtualenvs
+      - ./cs-insights-prediction-endpoint:/cs-insights-prediction-endpoint

@@ -14,12 +14,12 @@ services:
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
   backend:
-    # image: ghcr.io/gipplab/cs-insights-backend:latest
-    build: ./cs-insights-backend
+    image: ghcr.io/gipplab/cs-insights-backend:latest
     depends_on:
       - mongo
+    env_file: .env
     command: npm run cluster
-    expose: 
+    expose:
       - 3000
     ports:
       - 3000:3000
@@ -41,8 +41,7 @@ services:
     volumes:
       - ~/mongo/data:/data/db
   frontend:
-    # image: ghcr.io/gipplab/cs-insights-frontend:latest
-    build: ./cs-insights-frontend
+    image: ghcr.io/gipplab/cs-insights-frontend:latest
     restart: always
     env_file: .env
     command: nginx -g "daemon off;"
@@ -51,8 +50,7 @@ services:
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
   prediction-endpoint:
-    # image: ghcr.io/gipplab/cs-insights-prediction-endpoint:latest
-    build: ./cs-insights-prediction-endpoint
+    image: ghcr.io/gipplab/cs-insights-prediction-endpoint:latest
     restart: always
     env_file: .env
     command: poetry run python -m prod --workers 2
@@ -60,7 +58,7 @@ services:
       - mongo_user
       - mongo_password
       - jwt_secret
-    expose: 
+    expose:
       - 8000
     ports:
       - 8000:8000
@@ -70,8 +68,8 @@ services:
       - ~/prediction-endpoint/saved_models:/cs-insights-prediction-endpoint/saved_models
 secrets:
   mongo_user:
-    external: true
+    file: mongo_user.txt
   mongo_password:
-    external: true
+    file: mongo_password.txt
   jwt_secret:
-    external: true
+    file: jwt_secret.txt
