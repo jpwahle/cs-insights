@@ -94,7 +94,7 @@ You need to have `docker` and `docker-compose` installed.
 First, clone the repository *and its submodules* locally.
 
 ```
-git clone --recurse-submodules -j5 git@github.com:gipplab/cs-insights-main.git
+git clone --recurse-submodules -j5 https://github.com/gipplab/cs-insights-main.git
 
 ```
 
