@@ -10,18 +10,38 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-
-<div align="center">
+  <a href="https://github.com/gipplab/cs-insights-frontend"><img src="https://img.shields.io/badge/GitHub-Frontend-green?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-frontend/issues"><img src="https://img.shields.io/github/issues/gipplab/cs-insights-frontend.svg?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-frontend/graphs/contributors"><img src="https://img.shields.io/github/contributors/gipplab/cs-insights-frontend.svg?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-frontend/stargazers"><img src="https://img.shields.io/github/stars/gipplab/cs-insights-frontend.svg?style=for-the-badge"/></a>
+  <br />
+  <a href="https://github.com/gipplab/cs-insights-backend"><img src="https://img.shields.io/badge/GitHub-Backend-green?style=for-the-badge"/></a>
   <a href="https://github.com/gipplab/cs-insights-backend/issues"><img src="https://img.shields.io/github/issues/gipplab/cs-insights-backend.svg?style=for-the-badge"/></a>
   <a href="https://github.com/gipplab/cs-insights-backend/graphs/contributors"><img src="https://img.shields.io/github/contributors/gipplab/cs-insights-backend.svg?style=for-the-badge"/></a>
   <a href="https://github.com/gipplab/cs-insights-backend/stargazers"><img src="https://img.shields.io/github/stars/gipplab/cs-insights-backend.svg?style=for-the-badge"/></a>
+  <br />
+  <a href="https://github.com/gipplab/cs-insights-crawler"><img src="https://img.shields.io/badge/GitHub-Crawler-green?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-crawler/issues"><img src="https://img.shields.io/github/issues/gipplab/cs-insights-crawler.svg?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-crawler/graphs/contributors"><img src="https://img.shields.io/github/contributors/gipplab/cs-insights-crawler.svg?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-crawler/stargazers"><img src="https://img.shields.io/github/stars/gipplab/cs-insights-crawler.svg?style=for-the-badge"/></a>
+  <br />
+  <a href="https://github.com/gipplab/cs-insights-prediction-endpoint"><img src="https://img.shields.io/badge/GitHub-Prediction_Endpoint-green?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-prediction-endpoint/issues"><img src="https://img.shields.io/github/issues/gipplab/cs-insights-prediction-endpoint.svg?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-prediction-endpoint/graphs/contributors"><img src="https://img.shields.io/github/contributors/gipplab/cs-insights-prediction-endpoint.svg?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-prediction-endpoint/stargazers"><img src="https://img.shields.io/github/stars/gipplab/cs-insights-backend.svg?style=for-the-badge"/></a>
+  <br />
+  <a href="https://github.com/gipplab/cs-insights-uptime"><img src="https://img.shields.io/badge/GitHub-Uptime-green?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-uptime/issues"><img src="https://img.shields.io/github/issues/gipplab/cs-insights-uptime.svg?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-uptime/graphs/contributors"><img src="https://img.shields.io/github/contributors/gipplab/cs-insights-uptime.svg?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-uptime/stargazers"><img src="https://img.shields.io/github/stars/gipplab/cs-insights-backend.svg?style=for-the-badge"/></a>
+  <br />
+  <a href="https://github.com/gipplab/cs-insights-main"><img src="https://img.shields.io/badge/GitHub-main-green?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-main/issues"><img src="https://img.shields.io/github/issues/gipplab/cs-insights-main.svg?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-main/graphs/contributors"><img src="https://img.shields.io/github/contributors/gipplab/cs-insights-main.svg?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-main/stargazers"><img src="https://img.shields.io/github/stars/gipplab/cs-insights-backend.svg?style=for-the-badge"/></a>
+  <br />
   <a href="https://github.com/gipplab/cs-insights-main/blob/master/LICENSE"><img src="https://img.shields.io/github/license/gipplab/cs-insights-main.svg?style=for-the-badge"/></a>
-  </div>
-    <a href="https://github.com/gipplab/cs-insights-frontend"><img src="https://img.shields.io/badge/GitHub-Frontend-green?style=for-the-badge"/></a>
-    <a href="https://github.com/gipplab/cs-insights-backend"><img src="https://img.shields.io/badge/GitHub-Backend-green?style=for-the-badge"/></a>
-    <a href="https://github.com/gipplab/cs-insights-crawler"><img src="https://img.shields.io/badge/GitHub-Crawler-green?style=for-the-badge"/></a>
-    <a href="https://github.com/gipplab/cs-insights-prediction-endpoint"><img src="https://img.shields.io/badge/GitHub-Prediction_Endpoint-green?style=for-the-badge"/></a>
-    <a href="https://github.com/gipplab/cs-insights-uptime"><img src="https://img.shields.io/badge/GitHub-Uptime-green?style=for-the-badge"/></a>
+
 
   <div align="center">
   <p align="center">
