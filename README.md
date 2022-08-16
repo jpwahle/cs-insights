@@ -109,14 +109,14 @@ This will start each service (e.g., backend, frontend) in development mode with 
 To run the production environment in detached mode, run the following command:
 
 ```sh
-docker stack deploy -c docker-compose.yml cs-insights
+docker-compose up -d
 ```
 
 <details>
   <summary>Production Secrets</summary>
   
   Some secret variables should only be available encrypted as environment variables in the production environment.
-  Therefore, the docker-compose.yml contains external docker secrets encrypted on the host server. To export the secrets on the server, run the following command:
+  Therefore, the docker-compose.yml contains docker secrets encrypted on the host server. To export the secrets on the server, run the following command:
   
   ```sh
   docker swarm init
@@ -133,6 +133,25 @@ docker stack deploy -c docker-compose.yml cs-insights
   
   ```sh
   printf "<secret>" | docker secret create <secret_name> -
+  ```
+  
+  Alternatively to exporting external secrets and referring to them with
+  ```
+  mongo_password:
+    external: true
+  ```
+  
+  you can also store them in text files on the host system and give docker-compose the path
+  
+  ```
+  mongo_password:
+    file: mongo_password.txt
+  ```
+  
+  Supporting the secrets in files is compatible with docker-compose, while external secrets rely on docker stack deploy
+  
+  ```
+  docker stack deploy -c docker-compose.yml cs-insights
   ```
 </details>
 
