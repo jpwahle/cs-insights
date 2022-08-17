@@ -64,5 +64,4 @@ services:
     volumes:
       - /poetry.lock
       - /pyproject.toml
-      - /root/.cache/pypoetry/virtualenvs
       - ./cs-insights-prediction-endpoint:/cs-insights-prediction-endpoint
