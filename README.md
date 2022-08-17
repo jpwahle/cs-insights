@@ -25,7 +25,7 @@
   <a href="https://github.com/gipplab/cs-insights-crawler/graphs/contributors"><img src="https://img.shields.io/github/contributors/gipplab/cs-insights-crawler.svg?style=for-the-badge"/></a>
   <a href="https://github.com/gipplab/cs-insights-crawler/stargazers"><img src="https://img.shields.io/github/stars/gipplab/cs-insights-crawler.svg?style=for-the-badge"/></a>
   <br />
-  <a href="https://github.com/gipplab/cs-insights-prediction-endpoint"><img src="https://img.shields.io/badge/GitHub-Prediction_Endpoint-green?style=for-the-badge"/></a>
+  <a href="https://github.com/gipplab/cs-insights-prediction-endpoint"><img src="https://img.shields.io/badge/GitHub-Prediction-green?style=for-the-badge"/></a>
   <a href="https://github.com/gipplab/cs-insights-prediction-endpoint/issues"><img src="https://img.shields.io/github/issues/gipplab/cs-insights-prediction-endpoint.svg?style=for-the-badge"/></a>
   <a href="https://github.com/gipplab/cs-insights-prediction-endpoint/graphs/contributors"><img src="https://img.shields.io/github/contributors/gipplab/cs-insights-prediction-endpoint.svg?style=for-the-badge"/></a>
   <a href="https://github.com/gipplab/cs-insights-prediction-endpoint/stargazers"><img src="https://img.shields.io/github/stars/gipplab/cs-insights-backend.svg?style=for-the-badge"/></a>
