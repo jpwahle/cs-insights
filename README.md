@@ -39,7 +39,7 @@
   <br />
   <a href="http://cs-insights.uni-goettingen.de/">View Demo</a>
   ·
-  <a href="https://github.com/gipplab/cs-insights-uptime">Uptime Tracker</a>
+  <a href="https://gipplab.github.io/cs-insights-uptime/">Uptime Tracker</a>
   ·
   <a href="https://github.com/gipplab/cs-insights-main/issues/new?assignees=&labels=&template=bug_report.md&title=">Report Bug</a>
   ·
@@ -95,7 +95,12 @@ First, clone the repository *and its submodules* locally.
 
 ```
 git clone --recurse-submodules -j5 https://github.com/gipplab/cs-insights-main.git
+```
 
+If you are developing, it makes sense to start with the submodules (e.g., frontend, backend, ...) at their main branch. To update all submodules to main, run:
+
+```
+git submodule foreach git pull origin main
 ```
 
 To start the development environment, run the following command:
