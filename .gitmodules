@@ -17,4 +17,4 @@
 [submodule "cs-insights-uptime"]
 	path = cs-insights-uptime
 	url = https://github.com/gipplab/cs-insights-uptime
-	branch = master
+	branch = main
