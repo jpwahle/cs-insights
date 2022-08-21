@@ -24,7 +24,6 @@ services:
       - 3000
     ports:
       - 3000:3000
-    restart: on-failure
     environment:
       MONGO_HOST: ${MONGO_HOST}
     secrets:
@@ -45,11 +44,11 @@ services:
     image: ghcr.io/gipplab/cs-insights-frontend:latest
     restart: always
     env_file: .env
-    command: nginx -g "daemon off;"
-    ports:
-      - 80:80
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
+    volumes:
+      - /cs-insights-frontend/build:/usr/share/nginx/html
+      - /cs-insights-frontend/nginx.conf:/etc/nginx/conf.d/default.conf
   prediction-endpoint:
     image: ghcr.io/gipplab/cs-insights-prediction-endpoint:latest
     restart: always
