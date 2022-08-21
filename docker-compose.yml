@@ -42,13 +42,16 @@ services:
       - ~/mongo/data:/data/db
   frontend:
     image: ghcr.io/gipplab/cs-insights-frontend:latest
+    command: nginx -g "daemon off;"
+    ports:
+      - 80:80
+      - 443:443
     restart: always
     env_file: .env
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
     volumes:
-      - /cs-insights-frontend/build:/usr/share/nginx/html
-      - /cs-insights-frontend/nginx.conf:/etc/nginx/conf.d/default.conf
+      - /etc/letsencrypt/live/cs-insights:/etc/letsencrypt/live/cs-insights
   prediction-endpoint:
     image: ghcr.io/gipplab/cs-insights-prediction-endpoint:latest
     restart: always
