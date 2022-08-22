@@ -115,7 +115,7 @@ The [frontend](https://github.com/gipplab/cs-insights-frontend) enables abstract
 To get a local copy up and running follow these simple example steps. The project relies on a singe docker-compose.yml file that is used to develop and deploy all the services.
 
 ### Prerequisites
-You need to have `docker` and `docker-compose` installed.
+You need to have `docker` and the `docker-compose-plugin` installed.
 
 ### Installation
 
@@ -134,7 +134,7 @@ git submodule foreach git pull origin main
 To start the development environment, run the following command:
 
 ```sh
-docker-compose --env-file .env.development -f docker-compose.dev.yml up --build
+docker compose --env-file .env.development -f docker-compose.dev.yml up --build
 ```
 
 This will start each service (e.g., backend, frontend) in development mode with hot reload. Whenever you change any files of the sub-repositories (e.g., ./cs-insights-frontend/src/App.tsx) the development server will reload and show the new rendered frontend.
@@ -142,8 +142,21 @@ This will start each service (e.g., backend, frontend) in development mode with 
 To run the production environment in detached mode, run the following command:
 
 ```sh
-docker-compose up -d
+docker compose up -d
 ```
+<details>
+  <summary>HTTPS Certificate Renewal</summary>
+  
+  SSL/TLS certificates are valid for 90 days. To renew then automatically install a cronjob that checks the renewal weekly on sundays at 9:00 UTC which is the time that fewest users are up to see the downtime. 
+  
+  ```sh
+  sudo crontab -e
+  ```
+  
+  ```sh
+  00 9 * * 0 certbot renew --dry-run --pre-hook "docker compose -f /home/jp/cs-insights-main/docker-compose.yml stop frontend" --post-hook "docker compose -f /home/jp/cs-insights-main/docker-compose.yml start frontend"
+  ```
+</details>
 
 <details>
   <summary>Production Secrets</summary>

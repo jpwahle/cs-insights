@@ -51,7 +51,8 @@ services:
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
     volumes:
-      - /etc/letsencrypt/live/cs-insights:/etc/letsencrypt/live/cs-insights
+      - /etc/letsencrypt/live/cs-insights/privkey.pem:/etc/letsencrypt/live/cs-insights/privkey.pem
+      - /etc/letsencrypt/live/cs-insights/fullchain.pem:/etc/letsencrypt/live/cs-insights/fullchain.pem
   prediction-endpoint:
     image: ghcr.io/gipplab/cs-insights-prediction-endpoint:latest
     restart: always
