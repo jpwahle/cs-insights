@@ -144,6 +144,19 @@ To run the production environment in detached mode, run the following command:
 ```sh
 docker compose up -d
 ```
+<details>
+  <summary>HTTPS Certificate Renewal</summary>
+  
+  SSL/TLS certificates are valid for 90 days. To renew then automatically install a cronjob that checks the renewal weekly on sundays at 9:00 UTC which is the time that fewest users are up to see the downtime. 
+  
+  ```sh
+  sudo crontab -e
+  ```
+  
+  ```sh
+  00 9 * * 0 certbot renew --dry-run --pre-hook "docker compose -f /home/jp/cs-insights-main/docker-compose.yml stop frontend" --post-hook "docker compose -f /home/jp/cs-insights-main/docker-compose.yml start frontend"
+  ```
+</details>
 
 <details>
   <summary>Production Secrets</summary>
