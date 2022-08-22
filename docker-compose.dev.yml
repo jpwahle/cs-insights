@@ -46,7 +46,7 @@ services:
     env_file: .env.development
     command: npm start
     ports:
-      - 80:3001
+      - 3001:3001
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
     volumes:
@@ -64,6 +64,4 @@ services:
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
     volumes:
-      - /poetry.lock
-      - /pyproject.toml
       - ./cs-insights-prediction-endpoint:/cs-insights-prediction-endpoint
