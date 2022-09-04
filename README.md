@@ -62,7 +62,7 @@
   </a>
   <br/>
   <br/>
-  <a href="https://jan-philip-wahle.gitbook.io/cs-insights/"><strong>Explore the docs »</strong></a>
+  <a href="https://gipplab.github.io/cs-insights-backend/"><strong>Explore the docs »</strong></a>
   <br />
   <br />
   <a href="http://cs-insights.uni-goettingen.de/">View Demo</a>
