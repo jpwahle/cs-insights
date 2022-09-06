@@ -1,13 +1,23 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
-
 <!-- PROJECT LOGO -->
+  <br/>
+  <div align="center">
+  <a href="https://cs-insights.uni-wuppertal.de">
+    <img src="images/logo.jpg" alt="Logo" width="250">
+  </a>
+  <br/>
+  <br/>
+  <a href="https://github.com/gipplab/cs-insights-main/wiki"><strong>Explore the docs »</strong></a>
+  <br />
+  <br />
+  <a href="http://cs-insights.uni-goettingen.de/">View Demo</a>
+  ·
+  <a href="https://gipplab.github.io/cs-insights-uptime/">Uptime Tracker</a>
+  ·
+  <a href="https://github.com/gipplab/cs-insights-main/issues/new?assignees=&labels=&template=bug_report.md&title=">Report Bug</a>
+  ·
+  <a href="https://github.com/gipplab/cs-insights-main/issues/new?assignees=&labels=&template=feature_request.md&title=">Request Feature</a>
+  </div>
 <br />
 <div align="center">
 <table>
@@ -48,38 +58,13 @@
   <td><a href="https://github.com/gipplab/cs-insights-main/stargazers"><img src="https://img.shields.io/github/stars/gipplab/cs-insights-backend.svg?style=for-the-badge"/></a></td>
   </tr>
 </table>
-<a href="https://github.com/gipplab/cs-insights-main/blob/master/LICENSE"><img src="https://img.shields.io/github/license/gipplab/cs-insights-main.svg?style=for-the-badge"/></a>
 
-
-  <div align="center">
-  <p align="center">
-    <br/>
-    The main controller for services in the cs-insights project through docker-compose
-    <br/>
-  </p>
-  <a href="https://github.com/gipplab/cs-insights-main">
-    <img src="images/logo.jpg" alt="Logo" width="250">
-  </a>
-  <br/>
-  <br/>
-  <a href="https://jan-philip-wahle.gitbook.io/cs-insights/"><strong>Explore the docs »</strong></a>
-  <br />
-  <br />
-  <a href="http://cs-insights.uni-goettingen.de/">View Demo</a>
-  ·
-  <a href="https://gipplab.github.io/cs-insights-uptime/">Uptime Tracker</a>
-  ·
-  <a href="https://github.com/gipplab/cs-insights-main/issues/new?assignees=&labels=&template=bug_report.md&title=">Report Bug</a>
-  ·
-  <a href="https://github.com/gipplab/cs-insights-main/issues/new?assignees=&labels=&template=feature_request.md&title=">Request Feature</a>
-  </div>
 
 <br/>
 <br/>
-Demo Credentials <br/>
+<strong>Demo Credentials </strong><br/>
 user: demo@cs-insights.com <br/>
 password: demo
-
 </div>
 
 <!-- ABOUT THE PROJECT -->
