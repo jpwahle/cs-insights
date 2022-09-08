@@ -21,7 +21,6 @@ services:
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
     volumes:
-      # - /cs-insights-backend/node_modules
       - ./cs-insights-backend:/cs-insights-backend
   mongo:
     image: mongo:5.0.9
@@ -37,7 +36,7 @@ services:
     volumes:
       - ~/mongo/data:/data/db
     logging:
-      driver: "none"
+      driver: none
   frontend:
     build:
       context: ./cs-insights-frontend
