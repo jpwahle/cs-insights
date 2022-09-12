@@ -73,7 +73,7 @@ password: demo
 
 [![Product Name Screen Shot][product-screenshot]](https://cs-insights.uni-goettingen.de)
 
-This project focusses on making information about computer science research available with a few mouse clicks. Therefore, we use the [DBLP Discovery Dataset D3](https://arxiv.org/abs/2204.13384) to show trends in volume, topics, impact, and many more.
+This project focusses on making information about computer science research available with a few mouse clicks. Therefore, we use the [DBLP Discovery Dataset D3](https://bit.ly/d3-dataset) to show trends in volume, topics, impact, and many more.
 The [frontend](https://github.com/gipplab/cs-insights-frontend) enables abstract access to the data through visualizations and filters. The [backend](https://github.com/gipplab/cs-insights-backend) enables access to the data through a well-defined REST API and makes it easy to index new data as well. The [prediction-endpoint](https://github.com/gipplab/cs-insights-prediction-endpoint) does the heavy lifting for analyzing topics and other semantic features using parents and childrens of docker containers that can run on different servers. Finally, the [crawler](https://github.com/gipplab/cs-insights-crawler) makes sure that the latest data is retrieved from the web, parsed, and stored into the backend.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
