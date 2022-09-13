@@ -3,7 +3,7 @@
   <br/>
   <div align="center">
   <a href="https://cs-insights.uni-wuppertal.de">
-    <img src="images/logo.jpg" alt="Logo" width="250">
+    <img src="images/logo.png" alt="Logo" width="250">
   </a>
   <br/>
   <br/>
