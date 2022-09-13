@@ -86,7 +86,6 @@ The [frontend](https://github.com/gipplab/cs-insights-frontend) enables abstract
 [![Node][Passport]][Passport-url]
 [![Node][Swagger]][Swagger-url]
 [![Node][Express]][Express-url]
-[![Node][Material.ui]][Material-url]
 [![Node][Node.js]][Node-url]
 [![Node][MongoDB]][Mongo-url]
 [![Node][Docker]][Docker-url]
@@ -258,8 +257,6 @@ Project Link: [https://github.com/gipplab/cs-insights-main](https://github.com/g
 [React-url]: https://reactjs.org/
 [Node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
 [Node-url]: https://nodejs.org/en/
-[Material.ui]:https://img.shields.io/static/v1?style=for-the-badge&message=Material+Design&color=757575&logo=Material+Design&logoColor=FFFFFF&label=
-[Material-url]: https://mui.com/
 [MongoDB]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
 [Mongo-url]: https://www.mongodb.com/
 [Docker]: https://img.shields.io/static/v1?style=for-the-badge&message=Docker&color=2496ED&logo=Docker&logoColor=FFFFFF&label=
