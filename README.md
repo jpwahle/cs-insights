@@ -2,7 +2,7 @@
 <!-- PROJECT LOGO -->
   <br/>
   <div align="center">
-  <a href="https://cs-insights.uni-wuppertal.de">
+  <a href="https://cs-insights.uni-goettingen.de">
     <img src="images/logo-with-text.png" alt="Logo" width="500">
   </a>
   <br/>
