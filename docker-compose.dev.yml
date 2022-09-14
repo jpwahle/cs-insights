@@ -32,6 +32,8 @@ services:
       MONGO_INITDB_DATABASE: ${MONGO_DB}
     expose:
       - 27017
+    ports:
+      - 27017:27017
     command: mongod
     volumes:
       - ~/mongo/data:/data/db
