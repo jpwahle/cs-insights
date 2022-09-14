@@ -71,7 +71,8 @@ password: demo
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://cs-insights.uni-goettingen.de)
+![An overview of the components in the CS-Insights ecosystem (in GitHub light mode)](images/system-overview-light.png#gh-light-mode-only)
+![An overview of the components in the CS-Insights ecosystem (in GitHub dark mode)](images/system-overview-dark.png#gh-dark-mode-only)
 
 This project focusses on making information about computer science research available with a few mouse clicks. Therefore, we use the [DBLP Discovery Dataset D3](https://bit.ly/d3-dataset) to show trends in volume, topics, impact, and many more.
 The [frontend](https://github.com/gipplab/cs-insights-frontend) enables abstract access to the data through visualizations and filters. The [backend](https://github.com/gipplab/cs-insights-backend) enables access to the data through a well-defined REST API and makes it easy to index new data as well. The [prediction-endpoint](https://github.com/gipplab/cs-insights-prediction-endpoint) does the heavy lifting for analyzing topics and other semantic features using parents and childrens of docker containers that can run on different servers. The [crawler](https://github.com/gipplab/cs-insights-crawler) makes sure that the latest data is retrieved from the web, parsed, and stored into the backend. Finally, the [uptime](https://github.com/gipplab/cs-insights-uptime) tracker periodically queries all endpoints to check their status and response times.
@@ -252,7 +253,6 @@ Project Link: [https://github.com/gipplab/cs-insights-main](https://github.com/g
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[product-screenshot]: images/system-overview.png
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
