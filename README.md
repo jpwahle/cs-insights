@@ -59,8 +59,6 @@
   </tr>
 </table>
 
-
-
 <br/>
 <br/>
 <strong>Demo Credentials </strong><br/>
@@ -69,6 +67,7 @@ password: demo
 </div>
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 ![An overview of the components in the CS-Insights ecosystem (in GitHub light mode)](images/system-overview-light.png#gh-light-mode-only)
@@ -79,33 +78,31 @@ The [frontend](https://github.com/gipplab/cs-insights-frontend) enables abstract
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 ### Built With
 
-[![React][React.js]][React-url]
-[![Node][Passport]][Passport-url]
-[![Node][Swagger]][Swagger-url]
-[![Node][Express]][Express-url]
-[![Node][Node.js]][Node-url]
-[![Node][MongoDB]][Mongo-url]
-[![Node][Docker]][Docker-url]
-
+[![React][react.js]][react-url]
+[![Node][passport]][passport-url]
+[![Node][swagger]][swagger-url]
+[![Node][express]][express-url]
+[![Node][node.js]][node-url]
+[![Node][mongodb]][mongo-url]
+[![Node][docker]][docker-url]
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- GETTING STARTED -->
+
 ## Getting Started
+
 To get a local copy up and running follow these simple example steps. The project relies on a singe docker-compose.yml file that is used to develop and deploy all the services.
 
 ### Prerequisites
+
 You need to have `docker` and the `docker-compose-plugin` installed.
 
 ### Installation
 
-First, clone the repository *and its submodules* locally.
+First, clone the repository _and its submodules_ locally.
 
 ```
 git clone --recurse-submodules -j5 https://github.com/gipplab/cs-insights-main.git
@@ -130,6 +127,7 @@ To run the production environment in detached mode, run the following command:
 ```sh
 docker compose up -d
 ```
+
 <details>
   <summary>HTTPS Certificate Renewal</summary>
   
@@ -145,6 +143,21 @@ docker compose up -d
 </details>
 
 <details>
+  <summary>Database Updates</summary>
+  
+  To update the database with the latest release, run the following commands (replace admin/admin_password with the production secrets):
+  
+  ```sh
+  mongoimport --db csinsights --collection papers --file papers.jsonl --upsertFields=corpusid --mode=upsert --authenticationDatabase=admin --username admin --password admin_password --numInsertionWorkers 12
+  
+  mongoimport --db csinsights --collection authors --file authors.jsonl --upsertFields=authorid --mode=upsert --authenticationDatabase=admin --username admin --password admin_password --numInsertionWorkers 12
+  ```
+
+This will update all existing entries and add new entries on the respective id fields.
+
+</details>
+
+<details>
   <summary>Production Secrets</summary>
   
   Some secret variables should only be available encrypted as environment variables in the production environment.
@@ -155,45 +168,48 @@ docker compose up -d
   ```
   Or you can also join a swarm using
 
-  ```sh
-  docker swarm join --token <token> <manager-ip>:2377
-  ```
-  
-  where manager-ip is cs-insights.uni-goettingen.de.
+```sh
+docker swarm join --token <token> <manager-ip>:2377
+```
 
-  Then create the secrets of the docker-compose-yml with the following command:
-  
-  ```sh
-  printf "<secret>" | docker secret create <secret_name> -
-  ```
-  
-  Alternatively to exporting external secrets and referring to them with
-  ```
-  mongo_password:
-    external: true
-  ```
-  
-  you can also store them in text files on the host system and give docker-compose the path
-  
-  ```
-  mongo_password:
-    file: mongo_password.txt
-  ```
-  
-  Supporting the secrets in files is compatible with docker-compose, while external secrets rely on docker stack deploy
-  
-  ```
-  docker stack deploy -c docker-compose.yml cs-insights
-  ```
+where manager-ip is cs-insights.uni-goettingen.de.
+
+Then create the secrets of the docker-compose-yml with the following command:
+
+```sh
+printf "<secret>" | docker secret create <secret_name> -
+```
+
+Alternatively to exporting external secrets and referring to them with
+
+```
+mongo_password:
+  external: true
+```
+
+you can also store them in text files on the host system and give docker-compose the path
+
+```
+mongo_password:
+  file: mongo_password.txt
+```
+
+Supporting the secrets in files is compatible with docker-compose, while external secrets rely on docker stack deploy
+
+```
+docker stack deploy -c docker-compose.yml cs-insights
+```
+
 </details>
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
 <!-- USAGE EXAMPLES -->
+
 ## Usage
 
 The services are available on the following ports:
+
 - frontend: `80/443` or `3001` (dev)
 - backend: `80/443` or `3000` (dev)
 - prediction-endpoint: `8000`
@@ -202,18 +218,16 @@ _For more examples, please refer to the individual API documentation for [backen
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- ROADMAP -->
+
 ## Roadmap
 
 See the [project board](https://github.com/orgs/gipplab/projects/8) for a full list of features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTRIBUTING -->
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -230,18 +244,16 @@ Don't forget to give the project a star! Thanks again!
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-
-
 <!-- CONTACT -->
+
 ## Contact
 
 Jan Philip Wahle - [@jan_wahle](https://twitter.com/jan_wahle) - wahle@gipplab.org
@@ -253,17 +265,18 @@ Project Link: [https://github.com/gipplab/cs-insights-main](https://github.com/g
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://reactjs.org/
-[Node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
-[Node-url]: https://nodejs.org/en/
-[MongoDB]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
-[Mongo-url]: https://www.mongodb.com/
-[Docker]: https://img.shields.io/static/v1?style=for-the-badge&message=Docker&color=2496ED&logo=Docker&logoColor=FFFFFF&label=
-[Docker-url]: https://www.docker.com/
-[Passport]: https://img.shields.io/static/v1?style=for-the-badge&message=Passport&color=222222&logo=Passport&logoColor=34E27A&label=
-[Passport-url]: https://www.passportjs.org/
-[Swagger]: https://img.shields.io/static/v1?style=for-the-badge&message=Swagger&color=222222&logo=Swagger&logoColor=85EA2D&label=
-[Swagger-url]: https://swagger.io/
-[Express]: https://img.shields.io/static/v1?style=for-the-badge&message=Express&color=000000&logo=Express&logoColor=FFFFFF&label=
-[Express-url]: https://expressjs.com/
+
+[react.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[react-url]: https://reactjs.org/
+[node.js]: https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white
+[node-url]: https://nodejs.org/en/
+[mongodb]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
+[mongo-url]: https://www.mongodb.com/
+[docker]: https://img.shields.io/static/v1?style=for-the-badge&message=Docker&color=2496ED&logo=Docker&logoColor=FFFFFF&label=
+[docker-url]: https://www.docker.com/
+[passport]: https://img.shields.io/static/v1?style=for-the-badge&message=Passport&color=222222&logo=Passport&logoColor=34E27A&label=
+[passport-url]: https://www.passportjs.org/
+[swagger]: https://img.shields.io/static/v1?style=for-the-badge&message=Swagger&color=222222&logo=Swagger&logoColor=85EA2D&label=
+[swagger-url]: https://swagger.io/
+[express]: https://img.shields.io/static/v1?style=for-the-badge&message=Express&color=000000&logo=Express&logoColor=FFFFFF&label=
+[express-url]: https://expressjs.com/
