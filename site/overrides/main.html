@@ -1,0 +1,14 @@
+{% extends "base.html" %} {% block extrahead %} {% if page and page.url == '' %}
+<meta
+  property="og:title"
+  content="{{ config.site_name }} - An open-source CLI to run ML workflows on cloud"
+/>
+{% elif page and page.title %}
+<meta property="og:title" content="{{ config.site_name }} - {{ page.title }}" />
+{% else %}
+<meta property="og:title" content="{{ config.site_name }}" />
+{% endif %}
+<meta property="og:description" content="{{ config.site_description }}" />
+{% endblock %} {% block announce %} If you like cs-insights, give us a ⭐ on
+<a href="https://github.com/gipplab/cs-insights-main" target="_blank">GitHub</a
+>! {% endblock %}

@@ -1,0 +1,77 @@
+site_name: cs-insights
+repo_url: https://github.com/gipplab/cs-insights-main
+repo_name: gipplab/cs-insights-main
+site_description: >-
+  CS-Insights is an open-source project that makes information about computer science research available with the click of a button.
+edit_uri: edit/master/docs/
+copyright: © 2022 CS-Insights
+theme:
+  name: material
+  custom_dir: docs/overrides
+  logo: assets/logo.svg
+  favicon: images/favicon.ico
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Source Sans Pro
+    code: IBM Plex Mono
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: slate
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - announce.dismiss
+markdown_extensions:
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - def_list
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - toc:
+      toc_depth: 2
+  - attr_list
+  - md_in_html
+extra_css:
+  - stylesheets/extra.css
+extra_javascript:
+  - javascripts/extra.js
+extra:
+  homepage: /
+  generator: false
+  # analytics: # TODO Add Google Analytics
+  #   provider: google
+  #   property: UA-XXXXXXXXX-X
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/gipplab/cs-insights-main
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/jpwahle
+nav:
+  - Quickstart:
+      - Getting started:
+          - What is cs-insights?: index.md
+          - "Tutorial: First steps": tutorials/first-steps.md
+      - Examples:
+          - Example Dashboards: examples/dashboards.md
+          - How to analyze research trends?: examples/topics.md
+          - How to analyze conferences?: examples/venues.md
+      - Devs:
+          - Local Development: dev.md
+          - About the Authors: about.md
+          - License: license.md
+      - Other docs:
+          - FAQs: faq.md
+  - Community: community.md
