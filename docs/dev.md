@@ -15,6 +15,8 @@ cd dstack-examples
 
 If you open the `.dstack/workflows.yaml` file inside the project, you'll see the following:
 
+This is a test.
+
 ```yaml
 workflows:
   - name: download
