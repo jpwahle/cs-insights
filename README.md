@@ -7,7 +7,7 @@
   </a>
   <br/>
   <br/>
-  <a href="https://github.com/gipplab/cs-insights-main/wiki"><strong>Explore the docs »</strong></a>
+  <a href="https://gipplab.github.io/cs-insights-main/"><strong>Explore the docs »</strong></a>
   <br />
   <br />
   <a href="http://cs-insights.uni-goettingen.de/">View Demo</a>
