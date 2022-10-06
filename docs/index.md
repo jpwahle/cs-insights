@@ -5,7 +5,7 @@
 ## Features
 
 - At-a-glance view of publications from top computer science conferences
-- Get analytics about a venues, authors, citations, topics, and more
+- Analytics about a venues, authors, citations, topics, and more
 - Browse papers by subject area
 - Currently supports over 10 different search terms.
 - Stay informed with an overview of computer science events happening around the world
