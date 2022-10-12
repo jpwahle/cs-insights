@@ -17,4 +17,4 @@ jobs:
       - run: |
           pip install mkdocs-redirects
           pip install mkdocs-material
-          mkdocs gh-deploy --config-file ../cs-insights-main/mkdocs.yml --force
+          mkdocs gh-deploy --config-file ../cs-insights/mkdocs.yml --force
