@@ -12,6 +12,8 @@
   <br />
   <a href="http://cs-insights.uni-goettingen.de/">View Demo</a>
   ·
+  <a href="https://github.com/users/jpwahle/projects/1">Project Board</a>
+  ·
   <a href="https://jpwahle.github.io/cs-insights-uptime/">Uptime Tracker</a>
   ·
   <a href="https://github.com/jpwahle/cs-insights/issues/new?assignees=&labels=&template=bug_report.md&title=">Report Bug</a>
