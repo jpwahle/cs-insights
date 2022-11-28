@@ -1,4 +1,4 @@
-version: '3.1'
+version: "3.1"
 
 services:
   watchtower:
@@ -14,7 +14,8 @@ services:
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
   backend:
-    image: ghcr.io/gipplab/cs-insights-backend:latest
+    context: ./cs-insights-backend
+    # image: ghcr.io/jpwahle/cs-insights-backend:latest
     depends_on:
       - mongo
     restart: always
@@ -41,7 +42,8 @@ services:
     volumes:
       - ~/mongo/data:/data/db
   frontend:
-    image: ghcr.io/gipplab/cs-insights-frontend:latest
+    context: ./cs-insights-frontend
+    # image: ghcr.io/jpwahle/cs-insights-frontend:latest
     command: nginx -g "daemon off;"
     ports:
       - 80:80
@@ -54,7 +56,8 @@ services:
       - /etc/letsencrypt/live/cs-insights/privkey.pem:/etc/letsencrypt/live/cs-insights/privkey.pem
       - /etc/letsencrypt/live/cs-insights/fullchain.pem:/etc/letsencrypt/live/cs-insights/fullchain.pem
   prediction-endpoint:
-    image: ghcr.io/gipplab/cs-insights-prediction-endpoint:latest
+    context: ./cs-insights-prediction-endpoint
+    # image: ghcr.io/jpwahle/cs-insights-prediction-endpoint:latest
     restart: always
     env_file: .env
     command: poetry run python -m prod --workers 2
