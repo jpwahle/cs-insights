@@ -14,7 +14,7 @@ services:
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
   backend:
-    context: ./cs-insights-backend
+    build: ./cs-insights-backend
     # image: ghcr.io/jpwahle/cs-insights-backend:latest
     depends_on:
       - mongo
@@ -42,7 +42,7 @@ services:
     volumes:
       - ~/mongo/data:/data/db
   frontend:
-    context: ./cs-insights-frontend
+    build: ./cs-insights-frontend
     # image: ghcr.io/jpwahle/cs-insights-frontend:latest
     command: nginx -g "daemon off;"
     ports:
@@ -56,7 +56,7 @@ services:
       - /etc/letsencrypt/live/cs-insights/privkey.pem:/etc/letsencrypt/live/cs-insights/privkey.pem
       - /etc/letsencrypt/live/cs-insights/fullchain.pem:/etc/letsencrypt/live/cs-insights/fullchain.pem
   prediction-endpoint:
-    context: ./cs-insights-prediction-endpoint
+    build: ./cs-insights-prediction-endpoint
     # image: ghcr.io/jpwahle/cs-insights-prediction-endpoint:latest
     restart: always
     env_file: .env
