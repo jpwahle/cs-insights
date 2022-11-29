@@ -221,11 +221,20 @@ _For more examples, please refer to the individual API documentation for [backen
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
-<!-- ROADMAP -->
+<!-- FEATURES -->
 
+## Features
+
+For more details on the features of CS-Insights, please refer to our paper [here](https://arxiv.org/abs/2210.06878).
+ 
+<p align="right">(<a href="#top">back to top</a>)</p>
+  
+  
+<!-- ROADMAP -->
+  
 ## Roadmap
 
-See the [project board](https://github.com/users/jpwahle/projects/1) for a full list of features (and known issues).
+See the [project board](https://github.com/users/jpwahle/projects/1) for a full list of planned features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -259,8 +268,8 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Jan Philip Wahle - [@jan_wahle](https://twitter.com/jan_wahle) - wahle@gipplab.org
-Terry Ruas - [@ruasterry](https://twitter.com/jan_wahle) - ruas@gipplab.org
+Jan Philip Wahle - [@jpwahle](https://twitter.com/jpwahle) - wahle@gipplab.org
+Terry Ruas - [@ruasterry](https://twitter.com/ruasterry) - ruas@gipplab.org
 
 Project Link: [https://github.com/jpwahle/cs-insights](https://github.com/jpwahle/cs-insights)
 
